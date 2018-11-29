@@ -281,32 +281,32 @@ function foo(){
 	replot();
 }
 function replot(){
-	// try{
+	try{
 		if (implicitCurve != "")
 			drawImplicit(implicitCurve);
 			for(var j = 0; j < tangents[MaxExCurves].length; j++){
 					drawTan(implicitCurve, (tangents[MaxExCurves][j]).x, (tangents[MaxExCurves][j]).y, true);
 				}	
-	// 	}
-	// catch(err){
-	// 	console.log("Error");
-	// 	implicitCurve = "";
-	// 	alert(err);
-	// }
+		}
+	catch(err){
+	 	console.log("Error");
+	 	implicitCurve = "";
+		alert(err);
+	}
 	for(var i = 0; i < MaxExCurves; i++){
-		// try{
+		try{
 			if(explicitCurves[i].c != ""){
 				drawCurve(explicitCurves[i].c, explicitCurves[i].color);
 				for(var j = 0; j < tangents[i].length; j++){
 					drawTan(explicitCurves[i].c, (tangents[i][j]).x, (tangents[i][j]).y, false);
 				}
 			}
-		// }
-		// catch(err){
-		// 	console.log("Error");
-		// 	explicitCurves[i].c = "";
-		// 	alert(err);
-		// }
+		}
+		catch(err){
+		 	console.log("Error");
+		 	explicitCurves[i].c = "";
+			alert(err);
+		}
 	}
 }
 function zoom(factor, posX = width/2, posY = height/2){
