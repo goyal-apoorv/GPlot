@@ -375,8 +375,8 @@ function findPos(obj) {
     }
     return undefined;
 }
-
-function rgbToHex(r, g, b) {								//for converting to rbg representation of color
+/*this function for conversion rgb to hex is taken from an answer on stackoverflow*/ 
+function rgbToHex(r, g, b) {								//for converting rbg representation of color to hex
     if (r > 255 || g > 255 || b > 255)
         throw "Invalid color component";
     return ((r << 16) | (g << 8) | b).toString(16);
