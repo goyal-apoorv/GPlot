@@ -236,7 +236,7 @@ function eval(ob){
 	else if(ob.func == "sin")
 		val = Math.sin(ob.val1);
 	else if(ob.func == "cos")
-		val = Math.cos(ob.val2);
+		val = Math.cos(ob.val);
 	else if(ob.func == "tan")
 		val = Math.tan(ob.val1);
 	else if(ob.func == "exp")
